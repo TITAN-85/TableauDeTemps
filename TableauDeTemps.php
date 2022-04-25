@@ -4,14 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travail Pratique 3</title>
+    <title>Tableau de Temps</title>
 </head>
 <body>
     <nav>
-        <a href="TableauDeTemps.php"></a>
+        <a href="Travail-Pratique-3.html"></a>
     </nav>
     <main>
+        <?php
         
+
+
+
+
+
+
+        ?>
     </main>
 </body>
 </html>
