@@ -57,7 +57,7 @@
                 <?php }?>
             </tr>
             <tr>
-                <td> </td>
+            <?php //echo ?> <td> php </td> <?php ?>
             </tr>
         </table>
 
