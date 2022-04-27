@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tableau de Temps</title>
     <style>
-        td{
+        td {
             background-color: grey;
         }
     </style>
 </head>
+
 <body>
     <nav>
         <a href="Travail-Pratique-3.html"></a>
@@ -18,42 +20,49 @@
     <main>
         <?php
 
-date_default_timezone_set('America/Toronto');
-$d = date('Y-m-d:i:s');
-echo date("h:i");
+        date_default_timezone_set('America/Toronto');
+        $d = date('Y-m-d:i:s');
+        echo date("h:i");
 
         $timeBoard = [];
         $Hour = date("h");
-        $Minutes = date("i");
-
-        //echo $Hour;
-        //echo $Minutes;
-
-        for($i=0; $i<60; $i++){
-            $timeBoard[] = [];
-            for($j=0; $j<12; $j++){
-                $timeBoard[$i][] =$i." ".$j;
+        $minutes = date("i");
 
 
-                
-                ?> 
-                <td><?php //echo $timeBoard[$i][$j] ?></td>
-                <?php
-            }
-        }
+        //for ($i = 0; $i < 60; $i++) {
+        //    $timeBoard[] = [];
+        //    for ($j = 0; $j < 12; $j++) {
+        //        $timeBoard[$i][] = $i . " " . $j;
+        //        echo "<pre>" . print_r($timeBoard, true) . "<pre>";
+
+
+
+                        echo "<pre>" . print_r($timeBoard, true) . "<pre>";
+
+        ?>
+                <td><?php
+                    ?></td>
+        <?php
+            
+
 
         ?>
         <table>
-            
+
             <tr>
-                <td></td>
+                <?php for ($i = 0; $i < 20; $i++){
+                    $a[$i] = " x ";
+                 ?>
+                <td><?php echo $i; ?></td>
+                <?php }?>
             </tr>
             <tr>
-                <td></td>
+                <td> </td>
             </tr>
         </table>
 
 
     </main>
 </body>
+
 </html>
