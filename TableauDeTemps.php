@@ -18,19 +18,9 @@
     <main>
         <?php
 
-        //$col = " "; //12 Colons
-        //$ran = " "; //60 range
-        //date_default_timezone_set("Canada");
-        //$timezone = -5; //(GMT -5:00) est (U.S. & Canada);
-        //time() + 3600*($timezone+date("i"));
-//$date = new DateTime('2000-01-01', new DateTimeZone('Pacific/Nauru'));
-//$date->setTimezone(new DateTimeZone('Pacific/Chatham'));
-//echo $date->format('Y-m-d H:i:sP') . "\n";
-//$timezone  = -5;
-//echo gmdate("Y/m/j H:i:s", time() + 3600*($timezone+date("I")));
-echo date_default_timezone_set(-5);
-        echo "<br>";
-
+date_default_timezone_set('America/Toronto');
+$d = date('Y-m-d:i:s');
+echo date("h:i");
 
         $timeBoard = [];
         $Hour = date("h");
@@ -51,10 +41,6 @@ echo date_default_timezone_set(-5);
                 <?php
             }
         }
-
-//print_r($timeBoard);
-
-echo gmdate("h:i");
 
         ?>
         <table>
