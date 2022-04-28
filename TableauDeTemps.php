@@ -9,6 +9,7 @@
     <style>
         td {
             background-color: grey;
+            padding: 10px;
         }
     </style>
 </head>
@@ -29,39 +30,39 @@
         $minutes = date("i");
 
 
-        //for ($i = 0; $i < 60; $i++) {
-        //    $timeBoard[] = [];
-        //    for ($j = 0; $j < 12; $j++) {
-        //        $timeBoard[$i][] = $i . " " . $j;
-        //        echo "<pre>" . print_r($timeBoard, true) . "<pre>";
-
-
-
-                        echo "<pre>" . print_r($timeBoard, true) . "<pre>";
+        for ($i = 0; $i < 60; $i++) {
+            $timeBoard[] = [];
+            for ($j = 0; $j < 12; $j++) {
+                $timeBoard[$i][] = $i . " " . $j;
+                //echo "<pre>" . print_r($timeBoard, true) . "<pre>";
+            }
+        }
+        //echo "<pre>" . print_r($timeBoard, true) . "<pre>";
+        print_r($timeBoard);
+        //echo ?> <td> " " </td> <?php [$timeBoard];
 
         ?>
-                <td><?php
-                    ?></td>
+        <td><?php
+            ?></td>
         <?php
-            
 
 
+//fixme:
         ?>
         <table>
 
             <tr>
-                <?php for ($i = 0; $i < 20; $i++){
+                <?php for ($i = 0; $i < 20; $i++) {
                     $a[$i] = " x ";
-                 ?>
-                <td><?php echo $i; ?></td>
-                <?php }?>
-            </tr>
+                ?>
+                    <td><?php echo $i; ?></td>
+                <?php } ?>
+            </tr> 
             <tr>
-            <?php //echo ?> <td> php </td> <?php ?>
+                <?php //echo 
+                ?> <td></td> <?php ?>
             </tr>
         </table>
-
-
     </main>
 </body>
 
