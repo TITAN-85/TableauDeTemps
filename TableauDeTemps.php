@@ -13,18 +13,19 @@
         }
     </style>
 </head>
-
 <body>
     <nav>
         <a href="Travail-Pratique-3.html"></a>
     </nav>
     <main>
+        <section>
+            <?php
+            date_default_timezone_set('America/Toronto');
+            $d = date('Y-m-d:i:s');
+            ?>
+        </section>
+        <h1>Tableau de <?php echo date("h:i"); ?> </h1>
         <?php
-
-        date_default_timezone_set('America/Toronto');
-        $d = date('Y-m-d:i:s');
-        echo date("h:i");
-
         $timeBoard = [];
         $Hour = date("h");
         $minutes = date("i");
@@ -34,30 +35,21 @@
             $timeBoard[] = [];
             for ($j = 0; $j < 12; $j++) {
                 $timeBoard[$i][] = $i . " " . $j;
-                //echo "<pre>" . print_r($timeBoard, true) . "<pre>";
             }
         }
-        //echo "<pre>" . print_r($timeBoard, true) . "<pre>";
-        print_r($timeBoard);
-        //echo ?> <td> " " </td> <?php [$timeBoard];
-
-        ?>
-        <td><?php
-            ?></td>
+        ?> <td> " " </td> <?php [$timeBoard];?>
+        <td> <?php ?> </td>
         <?php
 
-
-//fixme:
         ?>
         <table>
-
             <tr>
                 <?php for ($i = 0; $i < 20; $i++) {
                     $a[$i] = " x ";
                 ?>
                     <td><?php echo $i; ?></td>
                 <?php } ?>
-            </tr> 
+            </tr>
             <tr>
                 <?php //echo 
                 ?> <td></td> <?php ?>
