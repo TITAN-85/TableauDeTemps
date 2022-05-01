@@ -12,7 +12,9 @@
             margin: auto;
         }
 
-        table, th, td {
+        table,
+        th,
+        td {
             border: 3px solid grey;
             border-collapse: collapse;
         }
@@ -22,7 +24,8 @@
             color: red;
         }
 
-        th, td {
+        th,
+        td {
             width: 55px;
             line-height: 40px;
             text-align: center;
@@ -48,41 +51,27 @@
         <section>
             <h1>Tableau de Temp<?php echo date("h:i"); ?> </h1>
             <?php
+
+
             $timeBoard = [];
-            $Hour = date("h");
+            $hour = date("g");
             $minutes = date("i");
 
-            for ($i = 0; $i < 60; $i++) {
-                $timeBoard[] = [];
-                for ($j = 0; $j < 12; $j++) {
-                    $timeBoard[$i][] = $i . " " . $j;
+            $minutesLigne = 60;
+            $heurColones = 12;
+
+            for ($i = 0; $i < $minutesLigne; $i++) {
+                for ($j = 0; $j < $heurColones; $j++) {
+                  $t[$i][$j] = "";
                 }
-            }
+              }
+
 
             ?>
         </section>
         <table>
-            <tr>
-                <th>Ligne/Colones</th>
-                <?php for ($i = 0; $i < 12; $i++) : ?>
-                    <th><?= $i ?></th>
-                <?php endfor ?>
-            </tr>
-            <?php for( $i =0; $i < 60; $i++) : ?>
-            <tr>
-            <th><?= $i ?></th>
-            <?php for( $j =0; $j < 12; $j++) : ?>
-                <td><?= 
 
-            $timeBoard[$Hour][$minutes] = "X";
-            $timeBoard[$i][$j];
-                ?></td>
-
-        <?php endfor ?>
-            </tr>
-            <?php endfor ?>      
         </table>
     </main>
 </body>
-
 </html>
