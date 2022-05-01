@@ -51,8 +51,6 @@
         <section>
             <h1>Tableau de Temp<?php echo date("h:i"); ?> </h1>
             <?php
-
-
             $timeBoard = [];
             $hour = date("g");
             $minutes = date("i");
@@ -62,16 +60,22 @@
 
             for ($i = 0; $i < $minutesLigne; $i++) {
                 for ($j = 0; $j < $heurColones; $j++) {
-                  $t[$i][$j] = "";
+                    $timeBoard[$i][$j] = "";
                 }
-              }
-
-
+            }
+            $timeBoard[$minutesLigne][$heurColones] = "X"
             ?>
         </section>
         <table>
+            <tr>
+                <th>Heures/Minutes</th>
+                <?php for($i=0; $i <$heurColones; $i++) {
+                   ?> <th> <?php $i ?> </th> 
+               <?php } ?>
+            </tr>
 
         </table>
     </main>
 </body>
+
 </html>
