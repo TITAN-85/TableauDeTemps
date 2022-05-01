@@ -63,7 +63,9 @@
                     $timeBoard[$i][$j] = "";
                 }
             }
-            $timeBoard[$minutesLigne][$heurColones] = "X"
+            //echo "<pre>".print_r($timeBoard, true)."<pre>";
+
+            $timeBoard[$minutesLigne][$heurColones] = "X";
             ?>
         </section>
         <table>
@@ -73,9 +75,16 @@
                    ?> <th> <?php $i ?> </th> 
                <?php } ?>
             </tr>
-
+            <?php for($i=0; $i <$heurColones; $i++) {
+                   ?><tr>
+                       <th> <?php $i ?> </th> 
+                       <?php for( $j =0; $j < $heurColones; $j++){ ?>
+                        <td>  <?php $timeBoard[$i][$j] ?> </td>
+                        <?php } ?>
+                    </tr>
+               <?php } ?>
+            </tr>
         </table>
     </main>
 </body>
-
 </html>
