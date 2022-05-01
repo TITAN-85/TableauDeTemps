@@ -65,7 +65,7 @@
             }
             //echo "<pre>".print_r($timeBoard, true)."<pre>";
 
-            $timeBoard[$minutesLigne][$heurColones] = "X";
+            $timeBoard[$minutes][$hour ] = "X";
             ?>
         </section>
         <section>
