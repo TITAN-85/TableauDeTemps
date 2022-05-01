@@ -56,7 +56,7 @@
             $minutes = date("i");
 
             $minutesLigne = 60;
-            $heurColones = 12;
+            $heurColones = 13;
 
             for ($i = 0; $i < $minutesLigne; $i++) {
                 for ($j = 0; $j < $heurColones; $j++) {
@@ -68,23 +68,25 @@
             $timeBoard[$minutesLigne][$heurColones] = "X";
             ?>
         </section>
-        <table>
-            <tr>
-                <th>Heures/Minutes</th>
-                <?php for($i=0; $i <$heurColones; $i++) {
-                   ?> <th> <?php $i ?> </th> 
-               <?php } ?>
-            </tr>
-            <?php for($i=0; $i <$heurColones; $i++) {
-                   ?><tr>
-                       <th> <?php $i ?> </th> 
-                       <?php for( $j =0; $j < $heurColones; $j++){ ?>
-                        <td>  <?php $timeBoard[$i][$j] ?> </td>
-                        <?php } ?>
+        <section>
+            <table>
+                <tr>
+                    <th>Heures/Minutes</th>
+                    <?php for( $i =0; $i < $heurColones; $i++) : ?>
+                    <th> <?= $i ?> </th>
+                    <?php endfor ?>
+                </tr>
+                <?php for($i = 0; $i < $minutesLigne; $i++) : ?>
+                    <tr>
+                        <th> <?= $i ?> </th>
+                        <?php for( $j =0; $j < $heurColones; $j++) : ?>
+                            <td><?= $timeBoard[$i][$j] ?></td>
+                        <?php endfor ?>
                     </tr>
-               <?php } ?>
-            </tr>
-        </table>
+                <?php endfor ?>
+            </table>
+        </section>
     </main>
 </body>
+
 </html>
