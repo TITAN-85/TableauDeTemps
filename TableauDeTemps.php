@@ -34,6 +34,12 @@
         td {
             color: green;
         }
+        .box{
+            background-color: brown;
+            color: white;
+            margin: 20px;
+            padding: 15px;
+        }
     </style>
 </head>
 
@@ -51,9 +57,10 @@
         <section>
             <h1>Tableau de Temp<?php echo date("h:i"); ?> </h1>
             <?php
+
             $timeBoard = [];
             $hour = date("g");
-            $minutes = date("i");
+            $minutes = (int)date("i");
 
             $minutesLigne = 60;
             $heurColones = 13;
@@ -64,6 +71,7 @@
                 }
             }
             //echo "<pre>".print_r($timeBoard, true)."<pre>";
+            
 
             $timeBoard[$minutes][$hour ] = "X";
             ?>
@@ -88,5 +96,4 @@
         </section>
     </main>
 </body>
-
 </html>
