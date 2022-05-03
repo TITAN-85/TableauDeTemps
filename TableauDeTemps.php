@@ -67,7 +67,7 @@
 
             for ($i = 0; $i < $minutesLigne; $i++) {
                 for ($j = 0; $j < $heurColones; $j++) {
-                    $timeBoard[$i][$j] = "";
+                    $timeBoard[$i][$j] = $j ;
                 }
             }
             //echo "<pre>".print_r($timeBoard, true)."<pre>";
